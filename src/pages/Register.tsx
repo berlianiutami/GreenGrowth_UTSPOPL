@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+<<<<<<< HEAD
 import { Trees, Eye, EyeOff, AlertCircle } from 'lucide-react';
+=======
+import { Trees, Eye, EyeOff } from 'lucide-react';
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
 import { useAuth } from '@/contexts/AuthContext';
 import { toast } from 'sonner';
 
@@ -18,6 +25,7 @@ const Register = () => {
     password: ''
   });
   const [showPassword, setShowPassword] = useState(false);
+<<<<<<< HEAD
   const [errors, setErrors] = useState<{[key: string]: string}>({});
   const { register, isLoading } = useAuth();
   const navigate = useNavigate();
@@ -71,6 +79,14 @@ const Register = () => {
       return;
     }
     
+=======
+  const { register, isLoading } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
     const success = await register(formData.name, formData.email, formData.password, formData.phone);
     if (success) {
       toast.success('Registrasi berhasil!');
@@ -99,6 +115,7 @@ const Register = () => {
               <div>
                 <Input
                   type="text"
+<<<<<<< HEAD
                   placeholder="Nama Lengkap (min. 3 karakter)"
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -111,11 +128,20 @@ const Register = () => {
                     {errors.name}
                   </div>
                 )}
+=======
+                  placeholder="Nama Anda"
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  required
+                />
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
               </div>
 
               <div>
                 <Input
                   type="tel"
+<<<<<<< HEAD
                   placeholder="08xxxxxxxxx atau +628xxxxxxxxx"
                   value={formData.phone}
                   onChange={(e) => setFormData({...formData, phone: e.target.value})}
@@ -128,11 +154,23 @@ const Register = () => {
                     {errors.phone}
                   </div>
                 )}
+=======
+                  placeholder="No Hp"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  required
+                />
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
               </div>
 
               <div>
                 <Select onValueChange={(value) => setFormData({...formData, userType: value})}>
+<<<<<<< HEAD
                   <SelectTrigger className={`bg-white/10 border-white/20 text-white ${errors.userType ? 'border-red-500' : ''}`}>
+=======
+                  <SelectTrigger className="bg-white/10 border-white/20 text-white">
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
                     <SelectValue placeholder="Jenis Pengguna" />
                   </SelectTrigger>
                   <SelectContent className="bg-gray-800 border-white/20 text-white">
@@ -141,17 +179,21 @@ const Register = () => {
                     <SelectItem value="company">Perusahaan</SelectItem>
                   </SelectContent>
                 </Select>
+<<<<<<< HEAD
                 {errors.userType && (
                   <div className="flex items-center mt-1 text-red-400 text-xs">
                     <AlertCircle className="w-3 h-3 mr-1" />
                     {errors.userType}
                   </div>
                 )}
+=======
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
               </div>
 
               <div>
                 <Input
                   type="email"
+<<<<<<< HEAD
                   placeholder="nama@email.com"
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -164,15 +206,30 @@ const Register = () => {
                     {errors.email}
                   </div>
                 )}
+=======
+                  placeholder="Alamat Email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
+                  required
+                />
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
               </div>
 
               <div className="relative">
                 <Input
                   type={showPassword ? "text" : "password"}
+<<<<<<< HEAD
                   placeholder="Min. 6 karakter, huruf + angka"
                   value={formData.password}
                   onChange={(e) => setFormData({...formData, password: e.target.value})}
                   className={`bg-white/10 border-white/20 text-white placeholder:text-gray-400 pr-10 ${errors.password ? 'border-red-500' : ''}`}
+=======
+                  placeholder="Kata Sandi"
+                  value={formData.password}
+                  onChange={(e) => setFormData({...formData, password: e.target.value})}
+                  className="bg-white/10 border-white/20 text-white placeholder:text-gray-400 pr-10"
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
                   required
                 />
                 <button
@@ -182,12 +239,15 @@ const Register = () => {
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
+<<<<<<< HEAD
                 {errors.password && (
                   <div className="flex items-center mt-1 text-red-400 text-xs">
                     <AlertCircle className="w-3 h-3 mr-1" />
                     {errors.password}
                   </div>
                 )}
+=======
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
               </div>
 
               <Button 

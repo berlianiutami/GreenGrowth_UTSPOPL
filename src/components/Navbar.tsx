@@ -40,9 +40,15 @@ const Navbar = () => {
                   <Link to="/adopsi-pohon" className="text-white hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Adopsi Pohon
                   </Link>
+<<<<<<< HEAD
                   <Link to="/edukasi" className="text-white hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
                     Edukasi
                   </Link>
+=======
+                  <a href="#" className="text-white hover:text-green-400 px-3 py-2 rounded-md text-sm font-medium transition-colors">
+                    Edukasi
+                  </a>
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
                 </>
               )}
               {user && (
@@ -115,9 +121,15 @@ const Navbar = () => {
                   <Link to="/adopsi-pohon" className="text-white hover:text-green-400 block px-3 py-2 rounded-md text-base font-medium">
                     Adopsi Pohon
                   </Link>
+<<<<<<< HEAD
                   <Link to="/edukasi" className="text-white hover:text-green-400 block px-3 py-2 rounded-md text-base font-medium">
                     Edukasi
                   </Link>
+=======
+                  <a href="#" className="text-white hover:text-green-400 block px-3 py-2 rounded-md text-base font-medium">
+                    Edukasi
+                  </a>
+>>>>>>> af52545e4c6a99527be2981b56d21924a30461f1
                 </>
               )}
               {user && (
